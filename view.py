@@ -26,3 +26,14 @@ class View:
         print("============================")
         print("Shop do no not consist item {}".format(name))
         print("============================")
+
+    # no item to update error
+    def noItemToUpdateError(self, name):
+        print("============================")
+        print("Not possible to update item {}".format(name))
+        print("============================")
+
+    # update item
+    def updateItem(self, name):
+        print("Shop item {} is updated".format(name))
+        print("============================")

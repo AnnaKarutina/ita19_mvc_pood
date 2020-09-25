@@ -21,3 +21,12 @@ class Controller:
             self.view.showItem(item)
         except:
             self.view.noItemError(name)
+
+    def updateItem(self, name, price, amount):
+        try:
+            self.model.updateItem(name, price, amount)
+            self.view.updateItem(name)
+            self.showItem(name) # controller method showItem
+        except:
+            self.view.noItemToUpdateError(name)
+            self.view.noItemError(name)

@@ -13,3 +13,6 @@ class Model:
     # show item
     def showItem(self, name):
         return helpers.showItem(name)
+    # update item
+    def updateItem(self, name, price, amount):
+        helpers.updateItem(name, price, amount)

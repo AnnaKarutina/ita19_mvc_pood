@@ -22,3 +22,5 @@ shop.addItem("wine", 5.60, 5)
 shop.showItems()
 # show item
 shop.showItem("milk")
+# update item
+shop.updateItem("popcorn", 0.35, 60)
