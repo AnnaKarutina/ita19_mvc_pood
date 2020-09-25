@@ -37,3 +37,14 @@ class View:
     def updateItem(self, name):
         print("Shop item {} is updated".format(name))
         print("============================")
+
+    # no item to delete error
+    def noItemToDeleteError(self, name):
+        print("============================")
+        print("Not possible to delete item {}".format(name))
+        print("============================")
+
+    # delete item
+    def deleteItem(self, name):
+        print("Shop item {} is deleted".format(name))
+        print("============================")

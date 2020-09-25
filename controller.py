@@ -30,3 +30,12 @@ class Controller:
         except:
             self.view.noItemToUpdateError(name)
             self.view.noItemError(name)
+
+    def deleteItem(self, name):
+        try:
+            self.model.deleteItem(name)
+            self.view.deleteItem(name)
+            self.showItems() # controller method showItem
+        except:
+            self.view.noItemToDeleteError(name)
+            self.view.noItemError(name)

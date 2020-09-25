@@ -16,3 +16,6 @@ class Model:
     # update item
     def updateItem(self, name, price, amount):
         helpers.updateItem(name, price, amount)
+    # delete item
+    def deleteItem(self, name):
+        helpers.deleteItem(name)

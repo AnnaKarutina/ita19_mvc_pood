@@ -53,3 +53,19 @@ def updateItem(name, price, amount):
     if(isUpdated != True):
         raise exceptions.ItemNotExists("Not found {} item".format(name))
 
+# delete item
+def deleteItem(name):
+    global items
+    isDeleted = False
+    # control all items step by step
+    for item in items:
+        # if the name is the same as we search
+        if(item.getName() == name):
+            # delete item
+            items.remove(item)
+            isDeleted = True
+        else:
+            continue
+    # control if is not updated - error message
+    if(isDeleted != True):
+        raise exceptions.ItemNotExists("Not found {} item".format(name))
