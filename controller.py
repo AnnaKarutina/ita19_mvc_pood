@@ -39,3 +39,9 @@ class Controller:
         except:
             self.view.noItemToDeleteError(name)
             self.view.noItemError(name)
+    def deleteItems(self):
+        try:
+            self.model.deleteItems()
+            self.view.deleteItems()
+        except:
+            self.view.noItemsToDeleteError()

@@ -26,3 +26,5 @@ shop.showItem("milk")
 shop.updateItem("popcorn", 0.35, 60)
 # delete item
 shop.deleteItem("wine")
+# delete all items
+shop.deleteItems()

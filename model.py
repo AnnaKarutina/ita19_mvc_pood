@@ -19,3 +19,6 @@ class Model:
     # delete item
     def deleteItem(self, name):
         helpers.deleteItem(name)
+    # delete items
+    def deleteItems(self):
+        helpers.deleteItems()

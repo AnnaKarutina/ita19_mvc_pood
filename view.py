@@ -48,3 +48,13 @@ class View:
     def deleteItem(self, name):
         print("Shop item {} is deleted".format(name))
         print("============================")
+
+    # delete all items
+    def deleteItems(self):
+        print("All shop items are deleted")
+        print("============================")
+    # delete all items error
+    def noItemsToDeleteError(self):
+        print("============================")
+        print("Not possible to delete all items")
+        print("============================")

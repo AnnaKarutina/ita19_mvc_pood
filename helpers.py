@@ -20,7 +20,7 @@ def showItems():
     global items
     # control if items exists
     if len(items) == 0:
-        raise exceptions.ItemExists("List of items is empty")
+        raise exceptions.ItemNotExists("List of items is empty")
     else:
         return items
 # show item
@@ -69,3 +69,12 @@ def deleteItem(name):
     # control if is not updated - error message
     if(isDeleted != True):
         raise exceptions.ItemNotExists("Not found {} item".format(name))
+
+# delete all items
+def deleteItems():
+    global items
+    # if items contains more than 0 elements
+    if(len(items) > 0):
+        items.clear()
+    else:
+        raise exceptions.ItemNotExists("Not found any items")
