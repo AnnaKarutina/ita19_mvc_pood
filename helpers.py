@@ -33,10 +33,12 @@ def showItem(name):
             return item
         else:
             continue
-            raise exceptions.ItemExists("Not found {} item".format(name))
+            raise exceptions.ItemNotExists("Not found {} item".format(name))
+
 # update item
 def updateItem(name, price, amount):
     global items
+    isUpdated = False
     # control all items step by step
     for item in items:
         # if the name is the same as we search
@@ -44,6 +46,10 @@ def updateItem(name, price, amount):
             # update item
             item.setPrice(price)
             item.setAmount(amount)
+            isUpdated = True
         else:
-            raise exceptions.ItemExists("Not found {} item".format(name))
+            continue
+    # control if is not updated - error message
+    if(isUpdated != True):
+        raise exceptions.ItemNotExists("Not found {} item".format(name))
 
